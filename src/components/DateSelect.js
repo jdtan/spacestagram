@@ -1,15 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Context } from "../context/Store";
 import styled from "styled-components";
-import Select from "@mui/material/Select";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-// import DateAdapter from "@mui/lab/AdapterMoment";
-import DateAdapter from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
-import TextField from "@mui/material/TextField";
 import DatePicker from "react-date-picker";
 import "./DateSelect.css";
 
@@ -19,8 +10,6 @@ const SelectContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
-
-const StyledSelect = styled(Select)``;
 
 const DateSelect = () => {
   const { dateTaken } = useContext(Context);
@@ -43,6 +32,8 @@ const DateSelect = () => {
         value={value}
         clearIcon={null}
         calendarIcon={null}
+        maxDate={new Date()}
+        minDate={new Date("2015-06-13")}
       />
     </SelectContainer>
   );
