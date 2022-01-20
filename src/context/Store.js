@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext } from "react";
 
 export const Context = createContext();
 
@@ -15,7 +15,4 @@ const DataStore = (props) => {
   return <Context.Provider value={contextValue} {...props} />;
 };
 
-// const useContextData = () => useContext(Context);
-
-// export { DataStore, useContextData };
 export default DataStore;

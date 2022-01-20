@@ -4,6 +4,8 @@ import styled from "styled-components";
 
 import DateSelect from "../components/DateSelect";
 
+import { screenSize } from "../components/DetectScreen";
+
 const PageContainer = styled.div`
   background-image: url(${process.env.PUBLIC_URL}/earth-bg.jpg);
   position: absolute;
@@ -26,6 +28,11 @@ const StyledButton = styled.button`
   :hover {
     background: rgba(255, 255, 255, 0.5);
   }
+
+  @media only screen and (max-width: ${screenSize["m-tablet"]}) {
+    padding: 0.7em 3em;
+    font-size: 1.5em;
+  }
 `;
 
 const WelcomeContainer = styled.div`
@@ -40,6 +47,11 @@ const AppNameText = styled.h1`
   color: white;
   text-transform: uppercase;
   margin-top: 0;
+  text-shadow: 2px 2px rgba(13, 53, 78, 0.5);
+
+  @media only screen and (max-width: ${screenSize["m-tablet"]}) {
+    font-size: 6rem;
+  }
 `;
 const DateContainer = styled.div`
   margin: 0.5em 0 2em 0;
@@ -49,6 +61,13 @@ const ActionContainer = styled.div`
   background-color: rgb(255, 255, 255, 0.5);
   padding: 2em 8em;
   border-radius: 2em;
+  @media only screen and (max-width: ${screenSize["m-tablet"]}) {
+    margin-top: 6em;
+    padding: 4em 6em;
+  }
+  @media only screen and (max-width: ${screenSize["mobile"]}) {
+    padding: 4em 2em;
+  }
 `;
 
 const Landing = () => {

@@ -18,7 +18,6 @@
   position: absolute;
   inset: auto 0 0 0;
   border-bottom: 1px solid white;
-  /* bottom: 0; */
   height: 0.1em;
   width: 70%;
   margin: auto;
@@ -44,6 +43,17 @@
   filter: drop-shadow(0.5rem 0.5rem 1rem rgba(255, 255, 255, 0.3));
   width: 26em;
 }
+@media only screen and (max-width: 786px) {
+  .react-date-picker__calendar {
+    width: 20em !important;
+    margin-left: -54%;
+  }
+  .react-calendar__year-view .react-calendar__tile,
+  .react-calendar__decade-view .react-calendar__tile,
+  .react-calendar__century-view .react-calendar__tile {
+    padding: 1.2em 0.5em;
+  }
+}
 .react-calendar__navigation {
   height: auto;
   align-items: center;
@@ -56,4 +66,14 @@
 
 .react-calendar {
   width: auto;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #6994b4;
+}
+
+.react-calendar__tile--now:enabled,
+.react-calendar__tile--now:enabled:focus {
+  background: #b6defc;
 }

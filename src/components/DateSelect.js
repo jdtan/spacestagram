@@ -5,8 +5,6 @@ import DatePicker from "react-date-picker";
 import "./DateSelect.css";
 
 const SelectContainer = styled.div`
-  /* position: absolute;
-  inset: auto 5em 3em 5em; */
   display: flex;
   justify-content: center;
 `;
@@ -15,7 +13,6 @@ const DateSelect = () => {
   const { dateTaken } = useContext(Context);
   const [searchDate, setSearchDate] = dateTaken;
   const [value, onChange] = useState(new Date());
-  // console.log("value", value.toISOString().slice(0, 10)); // yyy-mm-dd
 
   const formatDate = (dateObj) => {
     return dateObj.toISOString().slice(0, 10);
