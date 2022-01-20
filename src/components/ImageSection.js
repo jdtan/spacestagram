@@ -47,8 +47,11 @@ const ImageDetailText = styled.div`
 `;
 
 const ImageIdentifier = styled.h1`
+  font-size: 6rem;
+  line-height: 6rem;
   letter-spacing: 0.15em;
   margin: 0;
+  color: white;
 `;
 
 const ImageDate = styled.h5`
@@ -83,7 +86,7 @@ const ButtonContainer = styled.div`
   z-index: 10;
   display: flex;
   > * {
-    margin: -2em 0.5em 1.5em 0.5em;
+    margin: -2em 0.5em 2em 0.5em;
   }
 `;
 
